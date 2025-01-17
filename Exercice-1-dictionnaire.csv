@@ -1,0 +1,9 @@
+| Propriété  | Commentaire | Entité  | Type    | Identifiant |
+|------------|-------------|---------|---------|-------------|
+| NuméroSS   | UNIQUE      | Authors | INT     | X           |
+| NomENF     | FOREIGN KEY | Authors | VARCHAR |             |
+| Prenom     | NOT NULL    |         | VARCHAR |             |
+| CodeEcole  | UNIQUE      | Ecole   | INT     | X           |
+| NomEC      | FOREIGN KEY | Ecole   | VARCHAR |             |
+| CodePostal | NOT NULL    | Commune | INT     | X           |
+| NomC       | FOREIGN KEY | Commune | VARCHAR |             |
