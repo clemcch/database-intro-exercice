@@ -1,0 +1,35 @@
+| Propriété     | Commentaire    | Entité  | Type         | Identifiant |
+|---------------|----------------|---------|--------------|-------------|
+| ID            | NOT NULL AUTO-INCREMENT | Authors | INT          | X           |
+| Firstname     | NOT NULL       | Authors | VARCHAR(255) |             |
+| Lastname      | NOT NULL       | Authors | VARCHAR(255) |             |
+| country       | NOT NULL       | Authors | VARCHAR(255) |             |
+| date_of_birth | NOT NULL       | Authors | DATE         |             |
+| date_of_death |                |         | DATE         |             |
+|-----------|----------------|---------|--------------|-------------|
+| ID        | AUTO-INCREMENT | editors | INT          | X           |
+| name      | NOT NULL       | editors | VARCHAR(255) |             |
+|---------------|------------------------|---------|--------------|-------------|
+| ID            | NOT NULL AUTO-INCREMENT         | members | INT          | X           |
+| firstname     | NOT NULL               | members | VARCHAR(255) |             |
+| lastname      | NOT NULL               | members | VARCHAR(255) |             |
+| email         | UNIQUE NOT NULL        | members | VARCHAR(255) |             |
+| date_of_birth | NOT NULL               | members | DATE         |             |
+| registered    | NOT NULL DEFAULT FALSE | members | BOOLEAN      |             |
+|-----------|----------------------|--------|--------------|-------------|
+| ID        | NOT NULLAUTO-INCREMENT       | books  | INT          | X           |
+| title     | NOT NULL             | books  | VARCHAR(255) |             |
+| year      | NOT NULL             | books  | INT          |             |
+| author_id | NOT NULL FOREIGN KEY | books  | INT          |             |
+|------------------|----------------------|---------------|--------------|-------------|
+| isbn             | NOT NULL             | book_editions | VARCHAR(255) | X           |
+| book_id          | NOT NULL FOREIGN_KEY | book_editions | INT          |             |
+| editor_id        | NOT NULL FOREIGN_KEY | book_editions | INT          |             |
+| publication_date | NOT NULL             | book_editions | DATE         |             |
+|-------------------|-------------------------|--------|---------------|-------------|
+| id                | NOT NULL AUTO INCREMENT | loans  | INT           | X           |
+| book_edition_isbn | NOT NULL FOREIGN KEY    | loans  | VARCHAR (255) |             |
+| member_id         | NOT NULL FOREIGN_KEY    | loans  | INT           |             |
+| loan_date         | NOT NULL                | loans  | DATE          |             |
+| return_date       | NOT NULL                | loans  | DATE          |             |
+| is_returned       | BOOLEAN NOT NULL        | loans  | DEFAULT FALSE |             |
