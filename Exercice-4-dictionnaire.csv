@@ -5,7 +5,7 @@ Propriété  & Commentaire & Entité  & Type    & Identifiant \\ \hline
 NuméroSS   & UNIQUE      & Enfant  & INT     & X           \\ \hline
 NomENF     & FOREIGN KEY & Enfant  & VARCHAR &             \\ \hline
 Prenom     & NOT NULL    & Enfant  & VARCHAR &             \\ \hline
-CodeEcole  & NOT NULL    & Ecole   & INT     & X           \\ \hline
+CodeEcole  & UNIQUE    & Ecole   & INT     & X           \\ \hline
 NomEC      & FOREIGN KEY & Ecole   & VARCHAR &             \\ \hline
 CodePostal & NOT NULL    & Commune & INT     & X           \\ \hline
 NomC       & FOREIGN KEY & Commune & VARCHAR &             \\ \hline
