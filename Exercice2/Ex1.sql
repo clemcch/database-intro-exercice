@@ -17,4 +17,6 @@ WHERE return_date < CURDATE() AND is_returned = FALSE;
 
 
 
-afficher le titre des livres dont le titre comporte moins de 50 caractères
+SELECT title
+FROM books
+WHERE LENGTH(title) < 50;
